@@ -1,13 +1,85 @@
-body {
+*, *::after, *::before {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #f28ab2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.card {
+  min-width: 450px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    min-width: 100%
+  }
+}
+
+.card h3 {
+  color: #102a42;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.card-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.info h5 {
+  color: #102a42;
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #f28ab2;
+  color: white;
+  font: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
 }
